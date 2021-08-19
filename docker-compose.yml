@@ -10,7 +10,7 @@ volumes:
 
 services:
   kong-db:
-    image: postgres:13-alpine
+    image: postgres:9.6-alpine
     volumes:
       - kong-datastore:/var/lib/postgresql/data
     networks:
@@ -69,7 +69,7 @@ services:
       NODE_ENV: development
 
   keycloak-db:
-    image: postgres:13-alpine
+    image: postgres:9.6-alpine
     volumes: 
       - keycloak-datastore:/var/lib/postgresql/data
     networks:
